@@ -22,9 +22,13 @@ namespace maduka_WebAPI.Controllers
         [SwaggerOperation("GetById")]
         [SwaggerResponse(HttpStatusCode.OK)]
         [SwaggerResponse(HttpStatusCode.NotFound)]
+        [ExceptionHandle]
         public string Get(int id)
         {
-            return "value";
+            var strValues = new string[] { "1", "2" };
+            return strValues[2];
+            // throw new System.NotImplementedException();
+            // return "value";
         }
 
         // POST api/values
