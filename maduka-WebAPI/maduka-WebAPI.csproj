@@ -108,8 +108,10 @@
     <Compile Include="App_Code\BasicAuthenticationFilter.cs" />
     <Compile Include="App_Code\BasicAuthenticationIdentity.cs" />
     <Compile Include="App_Code\ExceptionHandle.cs" />
+    <Compile Include="App_Code\LogHandle.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LogSampleController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
