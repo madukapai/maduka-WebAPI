@@ -9,7 +9,8 @@ namespace maduka_WebAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API 設定和服務
+            // 啟用跨網域存取
+            config.EnableCors();
 
             // Web API 路由
             config.MapHttpAttributeRoutes();
