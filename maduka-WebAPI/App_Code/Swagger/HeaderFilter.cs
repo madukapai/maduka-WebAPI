@@ -28,10 +28,7 @@ namespace maduka_WebAPI.Swagger
             for (int i = 0; i < strHeaders.Count; i++)
             {
                 // 切割參數
-                List<object> objEnums = new List<object>();
                 List<string> strHeaderParam = strHeaders[i].Split(",".ToCharArray()).ToList();
-                if (strHeaderParam.Count > 2)
-                    objEnums = strHeaderParam[2].Split("/".ToCharArray()).ToList<object>();
 
                 Parameter objParam = new Parameter()
                 {
@@ -41,8 +38,8 @@ namespace maduka_WebAPI.Swagger
                     required = true,
                 };
 
-                if (objEnums.Count > 0)
-                    objParam.@enum = objEnums;
+                if (strHeaderParam.Count > 2)
+                    objParam.@enum = strHeaderParam[2].Split("/".ToCharArray()).ToList<object>();
 
                 operation.parameters.Add(objParam);
             }
