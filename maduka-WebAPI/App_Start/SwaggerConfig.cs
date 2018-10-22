@@ -20,6 +20,7 @@ namespace maduka_WebAPI
             GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                     {
+                        c.OperationFilter<Swagger.HeaderFilter>();
                         // By default, the service root url is inferred from the request used to access the docs.
                         // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
                         // resolve correctly. You can workaround this by providing your own code to determine the root URL.
@@ -187,11 +188,9 @@ namespace maduka_WebAPI
                         //
                         //c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
                         // ***** Uncomment the following to enable the swagger UI *****
-                        /*
                             })
                         .EnableSwaggerUi(c =>
                             {
-                        */
                         // Use the "InjectStylesheet" option to enrich the UI with one or more additional CSS stylesheets.
                         // The file must be included in your project as an "Embedded Resource", and then the resource's
                         // "Logical Name" is passed to the method as shown below.

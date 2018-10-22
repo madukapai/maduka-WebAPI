@@ -108,6 +108,7 @@
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="packages.config" />
+    <Compile Include="App_Code\Swagger\HeaderAttribute.cs" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
@@ -118,9 +119,11 @@
     <Compile Include="App_Code\CorsOnActionHandle.cs" />
     <Compile Include="App_Code\ExceptionHandle.cs" />
     <Compile Include="App_Code\LogHandle.cs" />
+    <Compile Include="App_Code\Swagger\HeaderFilter.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CorsController.cs" />
+    <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\LogSampleController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
